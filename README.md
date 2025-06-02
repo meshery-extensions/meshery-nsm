@@ -7,7 +7,7 @@
 # Meshery Adapter for Network Service Mesh
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/meshery/meshery-nsm.svg)](https://hub.docker.com/r/meshery/meshery-nsm)
-[![Go Report Card](https://goreportcard.com/badge/github.com/meshery/meshery-nsm)](https://goreportcard.com/report/github.com/meshery/meshery-nsm)
+[![Go Report Card](https://goreportcard.com/badge/github.com/meshery-extensions/meshery-nsm)](https://goreportcard.com/report/github.com/meshery-extensions/meshery-nsm)
 [![Build Status](https://github.com/meshery/meshery-nsm/workflows/Meshery%20NSM/badge.svg)](https://github.com/meshery/meshery-nsm/actions)
 [![GitHub](https://img.shields.io/github/license/meshery/meshery-nsm.svg)](LICENSE)
 [![GitHub issues by-label](https://img.shields.io/github/issues/meshery/meshery-nsm/help%20wanted.svg)](https://github.com/meshery/meshery-nsm/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
