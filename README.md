@@ -10,7 +10,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/meshery-extensions/meshery-nsm)](https://goreportcard.com/report/github.com/meshery-extensions/meshery-nsm)
 [![Build Status](https://github.com/meshery/meshery-nsm/workflows/Meshery%20NSM/badge.svg)](https://github.com/meshery/meshery-nsm/actions)
 [![GitHub](https://img.shields.io/github/license/meshery/meshery-nsm.svg)](LICENSE)
-[![GitHub issues by-label](https://img.shields.io/github/issues/meshery/meshery-nsm/help%20wanted.svg)](https://github.com/meshery/meshery-nsm/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
+[![GitHub issues by-label](https://img.shields.io/github/issues/meshery/meshery-nsm/help%20wanted.svg)](https://github.com/issues?q=is%3Aopen%20is%3Aissue%20archived%3Afalse%20(org%3Ameshery%20OR%20org%3Aservice-mesh-performance%20OR%20org%3Aservice-mesh-patterns%20OR%20org%3Ameshery-extensions)%20label%3A%22help%20wanted%22)
 [![Website](https://img.shields.io/website/https/meshery.io/meshery.svg)](https://meshery.io/)
 [![Twitter Follow](https://img.shields.io/twitter/follow/mesheryio.svg?label=Follow&style=social)](https://twitter.com/intent/follow?screen_name=mesheryio)
 [![Slack](https://img.shields.io/badge/Slack-@meshery.svg?logo=slack)](http://slack.meshery.io)
@@ -47,7 +47,7 @@ Our projects are community-built and welcome collaboration. 👍 Be sure to see 
 ✔️ <em><strong>Discuss</strong></em> in the <a href="https://discuss.meshery.io">Community Forum</a>.<br />
 </p>
 <p align="center">
-<i>Not sure where to start?</i> Grab an open issue with the <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+org%3Alayer5io+org%3Ameshery+org%3Aservice-mesh-performance+org%3Aservice-mesh-patterns+label%3A%22help+wanted%22+">help-wanted label</a>.
+<i>Not sure where to start?</i> Grab an open issue with the <a href="https://github.com/issues?q=is%3Aopen%20is%3Aissue%20archived%3Afalse%20(org%3Ameshery%20OR%20org%3Aservice-mesh-performance%20OR%20org%3Aservice-mesh-patterns%20OR%20org%3Ameshery-extensions)%20label%3A%22help%20wanted%22">help-wanted label</a>.
 </p>
 
 **License**
