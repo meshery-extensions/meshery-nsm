@@ -1,25 +1,34 @@
-FROM golang:1.23 as builder
+FROM golang:1.23-alpine AS builder
 
 ARG VERSION
 ARG GIT_COMMITSHA
 WORKDIR /build
-# Copy the Go Modules manifests
-COPY go.mod go.mod
-COPY go.sum go.sum
-# cache deps before building and copying source so that we don't need to re-download as much
-# and so that source changes don't invalidate our downloaded layer
-RUN go mod download
-# Copy the go source
+
+COPY go.mod go.sum ./
+
+RUN go mod download && go mod verify
+
+# Copy the go sourcee
 COPY main.go main.go
 COPY internal/ internal/
 COPY nsm/ nsm/
-# Build
-RUN CGO_ENABLED=0 GOOS=linux GO111MODULE=on go build -ldflags="-w -s -X main.version=$VERSION -X main.gitsha=$GIT_COMMITSHA" -a -o meshery-nsm main.go
 
-# Use distroless as minimal base image to package the manager binary
-# Refer to https://github.com/GoogleContainerTools/distroless for more details
-FROM gcr.io/distroless/static
+RUN CGO_ENABLED=0 GOOS=linux GO111MODULE=on go build \
+    -ldflags="-w -s -X main.version=$VERSION -X main.gitsha=$GIT_COMMITSHA" \
+    -trimpath \
+    -a \
+    -o meshery-nsm main.go
+
+
+FROM gcr.io/distroless/static:nonroot
+WORKDIR /home/nonroot/.meshery
+
+COPY --from=builder --chown=65532:65532 /build/meshery-nsm .
+
+
 ENV DISTRO="debian"
-WORKDIR $HOME/.meshery
-COPY --from=builder /build/meshery-nsm .
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD ["/meshery-nsm", "-version"]
+
 ENTRYPOINT ["./meshery-nsm"]
