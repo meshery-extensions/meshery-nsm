@@ -1,0 +1,21 @@
+linters-settings:
+  staticcheck:
+    checks: ["all", "-ST1005"]
+
+linters:
+  disable-all: true
+  enable:
+    - dogsled
+    - errcheck
+    - gofmt
+    - goimports
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - typecheck
+    - unused
+    - whitespace
+
+run:
+  timeout: 5m
