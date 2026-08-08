@@ -1,5 +1,5 @@
 env:
-  GO_VERSION: '1.23'
+  GO_VERSION: '1.25'
 
 name: Meshery NSM
 on:
